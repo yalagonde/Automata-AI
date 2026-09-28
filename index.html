@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Automata AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🤖 Automata AI</h1>
+
+        <p class="subtitle">
+            DFA • NFA • ε-NFA • Regular Expression
+        </p>
+
+        <!-- AUTOMATA OPTIONS -->
+
+        <h2>Select Automata Type</h2>
+
+        <div class="options">
+
+            <button onclick="selectType('DFA')" id="dfaBtn">
+                DFA
+            </button>
+
+            <button onclick="selectType('NFA')" id="nfaBtn">
+                NFA
+            </button>
+
+            <button onclick="selectType('ENFA')" id="enfaBtn">
+                ε-NFA
+            </button>
+
+            <button onclick="selectType('RE')" id="reBtn">
+                Regular Expression
+            </button>
+
+        </div>
+
+
+        <!-- SELECTED TYPE -->
+
+        <div class="selected">
+
+            Selected Type:
+
+            <span id="selectedType">
+                None
+            </span>
+
+        </div>
+
+
+        <!-- INPUT AREA -->
+
+        <div id="inputArea">
+
+            <label>Alphabet</label>
+
+            <input
+                type="text"
+                id="alphabet"
+                placeholder="Example: a,b,c"
+            >
+
+            <label>Question</label>
+
+            <textarea
+                id="question"
+                placeholder="Enter your automata question here..."
+            ></textarea>
+
+            <label>Test String</label>
+
+            <input
+                type="text"
+                id="testString"
+                placeholder="Example: abc"
+            >
+
+            <button class="generate" onclick="generateAutomata()">
+                🚀 Generate Automata
+            </button>
+
+        </div>
+
+
+        <!-- OUTPUT -->
+
+        <div id="output">
+
+            <h2>Output</h2>
+
+            <div id="explanation"></div>
+
+            <div id="transitionTable"></div>
+
+            <div id="diagram"></div>
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
